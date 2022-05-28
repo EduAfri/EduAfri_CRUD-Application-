@@ -1,4 +1,5 @@
 using EduAfri.Data;
+using EduAfri.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,9 +32,13 @@ namespace EduAfri
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-           // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-               // .AddEntityFrameworkStores<ApplicationDbContext>();
-            //services.AddControllersWithViews();
+           services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            //Dependency injection Life time
+            services.AddScoped<IStudentService, StudentService>();
+
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,8 +60,8 @@ namespace EduAfri
 
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+          //  app.UseAuthentication();
+           // app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
