@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EduAfri</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/ollie.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="~/lib/vendor/themify-icons/css/themify-icons.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="~/lib/vendor/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/lib/vendor/owl-carousel/css/owl.theme.default.css">
+
+</head>
+<body>
+    <header>
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color:lightblue">
+        <div class="container-fluid">
+            <b><a class="navbar-brand" asp-controller="Subject" asp-action="ClassRoom">EduAfri</a></b>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Subject" asp-action="ClassRoom"><i class="bi bi-person-square"></i> Classrooms</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-gear"></i> Management
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Class" asp-action="Index"><i class="bi bi-gear"></i> Manage ClassRooms</a>
+                            <a class="dropdown-item" asp-controller="Tutor" asp-action="Index"><i class="bi bi-gear"></i> Manage Tutors</a>
+                            <a class="dropdown-item" asp-controller="Student" asp-action="Index"><i class="bi bi-gear"></i> Manage Students</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0" asp-controller="Subjects" asp-action="Filter" style="padding-right: 25px;">
+                    <input name="searchString" type="text" class="form-control" placeholder="Search EduAfri..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-gear"></i> Login
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" asp-controller="Subject" asp-action="ClassRoom"><i class="bi bi-gear"></i> Manage ClassRooms</a>
+                    </div>
+                </li>-->
+        <!-- <li class="nav-item ml-0 ml-lg-4">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" style="background-color:#f06161"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Login
+        </button>
+        <div class="dropdown-menu form" style="margin-left: 50rem">
+            <form class="px-4 py-3">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                    </label>
+                    <a asp-controller="Subject" asp-action="ClassRoom"><button type="submit" class="btn btn-primary btn-block">Sign in</button></></a>
+                </div>
+                <a asp-controller="Subject" asp-action="ClassRoom"><button type="submit" class="btn btn-primary btn-block">Sign in</button></></a>
+
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><small>New around here? Sign up</small></a>
+            <a class="dropdown-item" href="#"><small>Forgot password?</small></a>
+        </div>
+    </li>
+      -->
+        <!--</div>
+        </div>
+    </nav>-->
+
+        <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/imgs/EA_logo.png" alt="" class="brand-img"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testmonial">Testmonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item ml-0 ml-lg-4">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" style="background-color:#f06161"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login
+                            </button>
+                            <div class="dropdown-menu form" style="margin-left: 50rem">
+                                <form class="px-4 py-3">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                        <label class="form-check-label" for="dropdownCheck">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a class="navbar-brand" asp-controller="Subject" asp-action="ClassRoom"><button type="submit" class="btn btn-primary btn-block">Sign in</button></a>
+                                </form>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><small>New around here? Sign up</small></a>
+                                <a class="dropdown-item" href="#"><small>Forgot password?</small></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - EduAfri - <a asp-area="" asp-controller="Home" asp-action="Index">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- core  -->
+    <script src="~/lib/vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/vendor/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- Ollie js -->
+    <script src="~/js/ollie.js" asp-append-version="true"></script>
+
+
+    <!-- bootstrap 3 affix -->
+    <script src="~/lib/vendor/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Owl carousel  -->
+    <script src="~/lib/vendor/owl-carousel/js/owl.carousel.js"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -9,7 +9,7 @@ namespace EduAfri.Models
 {
     public class Media
     {
-        public int MediaId { get; set; }
+        public int Id { get; set; }
         public string MediaUrl { get; set; }
         public MediaType MediaType { get; set; }
 

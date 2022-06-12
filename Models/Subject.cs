@@ -1,4 +1,5 @@
-﻿using EduAfri.Data.Enums;
+﻿using EduAfri.Data.Base;
+using EduAfri.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace EduAfri.Models
 {
-    public class Subject
+    public class Subject: IEntityBase
     {
-        public int SubjectId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime DateCreated { get; set; }
@@ -17,6 +18,7 @@ namespace EduAfri.Models
         public bool Ended { get; set; }
         public Term Term { get; set; }
         public CourseCategory CourseCategory { get; set; }
+
 
         //Relationships
 
@@ -35,8 +37,6 @@ namespace EduAfri.Models
         public int TutorId { get; set; }
         [ForeignKey("TutorId")]
         public Tutor Tutors { get; set; }
-
-
-
+        
     }
 }

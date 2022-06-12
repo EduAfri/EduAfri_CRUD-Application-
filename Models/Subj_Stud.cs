@@ -12,6 +12,7 @@ namespace EduAfri.Models
 
         public int StudentId { get; set; }
         public Student Student { get; set; } // establish join
+        
 
 
         //relationship 

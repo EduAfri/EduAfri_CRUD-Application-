@@ -1,14 +1,18 @@
-﻿using System;
+﻿using EduAfri.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace EduAfri.Models
 {
-    public class Student
+    public class Student: IEntityBase
     {
-        public int StudentId { get; set; }
+        public int Id { get; set; } //changed from StudentId to Id when inheriting IEntityBase interface
+         
+        //Add required later
         public string FName { get; set; }
+
         public string LName { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }
