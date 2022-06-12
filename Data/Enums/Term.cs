@@ -9,7 +9,8 @@ namespace EduAfri.Data.Enums
     {
         FirstTerm = 1,
         SecondTerm,
-        ThirdTerm
+        ThirdTerm,
+        SummerClass
 
     }
 }

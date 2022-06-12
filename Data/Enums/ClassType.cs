@@ -7,15 +7,19 @@ namespace EduAfri.Data.Enums
 {
     public enum ClassType
     {
-        Basic1 = 1,
-        Basic2,
-        Basic3,
-        Basic4,
-        Basic5,
-        Basic6,
-        Basic7,
-        Basic8,
-        Basic9,
+        JSS1 =1,
+        JSS2,
+        JSS3,
+        SS1,
+        SS2,
+        SS3,
+        UTME,
+        BOOTCAMP,
+        TECH
+        
+
+
+        
 
 
     }

@@ -9,6 +9,7 @@ namespace EduAfri.Data.Enums
     {
         Science = 1,
         Commercial,
-        Art
+        Art,
+        CodingBootCamp
     }
 }

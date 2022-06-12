@@ -1,4 +1,5 @@
 ﻿using EduAfri.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -39,8 +40,6 @@ namespace EduAfri.Data
         public DbSet<Subj_Stud> Subj_Studs { get; set; }
         public DbSet<Student> Students { get; set; }
 
-
-
-
+        
     }
 }

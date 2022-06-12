@@ -4,14 +4,16 @@ using EduAfri.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EduAfri.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220604152220_StudentID-Updated-to-ID")]
+    partial class StudentIDUpdatedtoID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace EduAfri.Migrations
 
             modelBuilder.Entity("EduAfri.Models.Class", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ClassId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -32,7 +34,7 @@ namespace EduAfri.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ClassId");
 
                     b.ToTable("Classes");
                 });
@@ -110,7 +112,7 @@ namespace EduAfri.Migrations
 
             modelBuilder.Entity("EduAfri.Models.Subject", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SubjectId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -142,7 +144,7 @@ namespace EduAfri.Migrations
                     b.Property<int>("TutorId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("SubjectId");
 
                     b.HasIndex("ClassId");
 
@@ -153,7 +155,7 @@ namespace EduAfri.Migrations
 
             modelBuilder.Entity("EduAfri.Models.Tutor", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TutorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -185,7 +187,7 @@ namespace EduAfri.Migrations
                     b.Property<DateTime>("RegDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("TutorId");
 
                     b.ToTable("Tutors");
                 });
